@@ -8,6 +8,7 @@ package hdt2;
 /**
  *
  * @author DIANA
+ * @param <E>
  */
 public interface Stack <E>{
     
