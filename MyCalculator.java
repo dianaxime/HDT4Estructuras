@@ -11,6 +11,15 @@ package hdt2;
  */
 public class MyCalculator implements Calculator {
     
+    private static MyCalculator instance;
+    
+    public static MyCalculator getInstance(){
+        if (instance==null){
+            instance = new MyCalculator();
+        }
+        return instance;
+    }
+    
     @Override
     public int calculate (int num1, int num2, String op){
         //recibe dos numeros y un operador 
