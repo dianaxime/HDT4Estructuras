@@ -3,7 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hdt2;
+//package hdt2;
+/*Integrantes:
+Diana Ximena de Leon Figueroa 18607
+Fatima Jazmin Albeño Barrios 18060
+
+Miercoles 13 de febrero de 2019
+
+//Nodos para Doubly Linked List
 
 /**
  *
