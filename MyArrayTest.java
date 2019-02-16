@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author DIANA
  */
-public class MyStackTest {
+public class MyArrayTest {
     
-    /*public MyStackTest() {
+    /*public MyArrayTest() {
     }
     
     @BeforeClass
@@ -38,25 +38,25 @@ public class MyStackTest {
     }
 
     /**
-     * Test of push method, of class MyStack.
+     * Test of push method, of class MyArray.
      */
     /*@Test
     public void testPush() {
         System.out.println("push");
         Object item = null;
-        MyStack instance = new MyStack();
+        MyArray instance = new MyArray();
         instance.push(item);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of pop method, of class MyStack.
+     * Test of pop method, of class MyArray.
      */
     /*@Test
     public void testPop() {
         System.out.println("pop");
-        MyStack instance = new MyStack();
+        MyArray instance = new MyArray();
         Object expResult = null;
         Object result = instance.pop();
         assertEquals(expResult, result);
@@ -65,12 +65,12 @@ public class MyStackTest {
     }
 
     /**
-     * Test of peek method, of class MyStack.
+     * Test of peek method, of class MyArray.
      */
     /*@Test
     public void testPeek() {
         System.out.println("peek");
-        MyStack instance = new MyStack();
+        MyArray instance = new MyArray();
         Object expResult = null;
         Object result = instance.peek();
         assertEquals(expResult, result);
@@ -79,63 +79,64 @@ public class MyStackTest {
     }
 
     /**
-     * Test of empty method, of class MyStack.
+     * Test of size method, of class MyArray.
      */
     /*@Test
-    public void testEmpty() {
-        System.out.println("empty");
-        MyStack instance = new MyStack();
-        boolean expResult = false;
-        boolean result = instance.empty();
+    public void testSize() {
+        System.out.println("size");
+        MyArray instance = new MyArray();
+        int expResult = 0;
+        int result = instance.size();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of size method, of class MyStack.
+     * Test of empty method, of class MyArray.
      */
     /*@Test
-    public void testSize() {
-        System.out.println("size");
-        MyStack instance = new MyStack();
-        int expResult = 0;
-        int result = instance.size();
+    public void testEmpty() {
+        System.out.println("empty");
+        MyArray instance = new MyArray();
+        boolean expResult = false;
+        boolean result = instance.empty();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }*/
-    @Test
+     @Test
         public void testPush() {
-            MyStack<Integer> fifo = new MyStack<>();
-            fifo.push(10);
+            MyArray<Integer> fifo = new MyArray<>();
+            fifo.push(5);
+            fifo.push(11);
             int a=fifo.peek();
-            assertEquals(a,10);
+            assertEquals(a,11);
         }
     @Test
         public void testPop() {
-            MyStack<Integer> fifo = new MyStack<>();
-            fifo.push(10);
-            fifo.push(7);
-            fifo.push(3);
-            fifo.push(5);
+            MyArray<Integer> fifo = new MyArray<>();
+            fifo.push(77);
+            fifo.push(2);
+            fifo.push(9);
+            fifo.push(8);
             int a=fifo.pop();
-            assertEquals(a,5);
+            assertEquals(a,8);
         }
     @Test
         public void testSize() {
-            MyStack<Integer> fifo = new MyStack<>();
+            MyArray<Integer> fifo = new MyArray<>();
             fifo.push(10);
             fifo.push(7);
-            fifo.push(3);
-            fifo.push(5);
             int a=fifo.size();
-            assertEquals(a,4);
+            assertEquals(a,2);
         }
     @Test
         public void testEmpty() {
-            MyStack<Integer> fifo = new MyStack<>();
+            MyArray<Integer> fifo = new MyArray<>();
+            fifo.push(10);
             boolean a=fifo.empty();
-            assertEquals(a,true);
+            assertEquals(a,false);
         }
+    
 }
