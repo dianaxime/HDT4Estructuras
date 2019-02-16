@@ -40,7 +40,7 @@ public interface List<E> {
    // pre: list is not empty
    // post: removes first value from list
 
-   //public E removeLast();
+   public E removeLast();
    // pre: list is not empty
    // post: removes last value from list
 

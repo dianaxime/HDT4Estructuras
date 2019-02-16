@@ -12,7 +12,7 @@ package hdt2;
  */
 public class Node<E> {
     protected E data; // value stored in this element
-   protected Node<E> nextElement; // ref to next
+    protected Node<E> nextElement; // ref to next
 
    public Node(E v, Node<E> next)
    // pre: v is a value, next is a reference to 
