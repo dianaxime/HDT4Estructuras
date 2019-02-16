@@ -24,4 +24,17 @@ public class FactoryStack<E> {
         }
         return null;
     }
+    public Stack<E> getStack(String stack){
+        switch (stack) {
+            case "VECTOR":
+                return new MyStack<>();
+            case "ARRAY":
+                return new MyArray<>();
+            /*case "LIST":
+                return new MyList<>(list);*/
+            default:
+                break;
+        }
+        return null;
+    }
 }

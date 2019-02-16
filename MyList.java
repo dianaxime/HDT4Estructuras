@@ -41,7 +41,10 @@ public class MyList<E> implements Stack<E> {
 	// pre: stack is not empty
 	// post: top value (next to be popped) is returned
 	{
-		return data.getFirst();
+            E a;
+            a=pop();
+            push(a);
+            return a;
 	}
 	
     @Override

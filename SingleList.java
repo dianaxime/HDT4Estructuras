@@ -53,25 +53,26 @@ public class SingleList<E> extends AList<E>{
   // pre: list is not empty
   // post: removes and returns value from end of list
  { 
-        if (head == null) 
-            return null; 
-        Node<E> temp = head; 
-  
-        if ((count-1) == 0) 
-        { 
-            head = temp.nextElement; 
-        } 
-  
-        for (int i=0; temp!=null && i<(count-1); i++) 
-            temp = temp.nextElement; 
-  
-        if (temp == null || temp.nextElement == null) 
-            return  temp.value(); 
-
-        Node<E> next = temp.nextElement.nextElement; 
-  
-        temp.nextElement = next;
-        return temp.value();
+      // pointer to possible tail
+         Node<E> finger = head;
+         Node<E> previous= null;
+      if (head != null)
+     {
+         
+         while (finger.next() != null)
+         {
+             previous=finger;
+                finger = finger.next();
+         }    
+      } 
+      if (previous==null){
+          head=null;
+      }
+      else{
+          previous.setNext(null);
+      } 
+	  count--;
+	return finger.value();  
   }
   
    @Override
